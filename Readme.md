@@ -1,5 +1,4 @@
 # Snake Game
-================
 
 A classic Snake game implemented in C++ for the console.
 

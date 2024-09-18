@@ -155,10 +155,18 @@ void Snake::input() {
   if (_kbhit()) {
     char key = tolower(_getch());
     switch (key) {
-      case 'a': if (dir != RIGHT) dir = LEFT; directionSymbol = '<'; break;
-      case 'd': if (dir != LEFT) dir = RIGHT;  directionSymbol = '>'; break;
-      case 'w': if (dir != DOWN) dir = UP;  directionSymbol = '^'; break;
-      case 's': if (dir != UP) dir = DOWN;  directionSymbol = 'v'; break;
+      case 'a': if (dir != RIGHT) {
+        dir = LEFT; directionSymbol = '<';
+      } break;
+      case 'd': if (dir != LEFT) {
+        dir = RIGHT;  directionSymbol = '>';
+      } break;
+      case 'w': if (dir != DOWN) {
+        dir = UP;  directionSymbol = '^';
+      } break;
+      case 's': if (dir != UP) {
+        dir = DOWN;  directionSymbol = 'v';
+      } break;
       case 'x': gameOver = true; break;
     }
   }
